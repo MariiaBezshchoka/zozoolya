@@ -1,45 +1,379 @@
 <!DOCTYPE html>
 <html lang="ukr">
+
 <head>
-    <title>ЗоZooля - все для улюбленця</title>
-        <meta charset="utf-8">
-        <meta name="generator" content="Vue Storefront">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-        <meta name="mobile-web-app-capable" content="yes">
-        <link rel="stylesheet" href="classes.css">
-
-        <link rel="preload" href="/classes.css" as="style">
+    <title>Royal Canin Indoor - Сухий корм з птицею для домашніх котів</title>
+    <meta charset="utf-8">
+    <meta name="generator" content="Vue Storefront">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="classes.css">
+    <meta name="description" content="Інтернет зоомагазин ЗоZooля ⭐ Тут можна купити зоотовари від кращих брендів з доставкою додому. Замовити товари для домашніх тварин в інтернет-магазині зоотоварів ЗоZooля">
+    <link rel="icon" href="icons/favicon.png">
+    <link rel="preload" href="/classes.css" as="style">
+    <script src="zoo.js"></script>
 </head>
+
 <body>
-<div class="wrapper">
-<header class="container">
-<div class="top">Найвигідніші пропозиції шукайте на сторінці акцій!</div>
-    <div>
-    <span><a href="Home.html"><img src="logo.png" class="logo"></a>
-        <div class="middle">
-        <ul>
-            <li><form><input type="search" class="h-search" placeholder="Пошук"><button type="submit" class="img-loop"><img src="icons/loop.svg"></button></form></li>
-            <li class="main-button"><a href="#"><img src="icons/heart.svg"></a></li>
-            <li class="main-button"><a href="#"><img src="icons/cart.svg"></a></li>
-            <li class="main-button"><a href="#">Профіль</a></li>
-        </ul>
+    <div class="wrapper">
+<input type="checkbox" id="show-popup">
+        <div class="popup-overlay">
+            <div class="login-reg-form-popup">
+                <label for="show-popup" class="close-btn-login-popup"></label>
+                <input type="checkbox" id="login-toggle">
+                <div class="form-container">
+                    <div class="form-toggle">
+                        <label for="login-toggle" class="login-tab">Войти</label>
+                        <label for="login-toggle" class="register-tab">Регистрация</label>
+                    </div>
+                    <form action="#" class="field-login-form login-form">
+                        <h2>Логін</h2>
+                        <form action="#" id="login-form">
+                            <div>
+                                <label for="email">E-mail</label>
+                                <input type="email" pattern=".+@example\.com" size="30" placeholder="" required>
+                            </div>
+                            <div>
+                                <label for="pass">Пароль</label>
+                                <input type="password" minlength="8" required>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="main-button form-button">Увійти</button>
+                            </div>
+                        </form>
+                        <div class="register-form">
+                            <div>
+                                <h2>Реєстрація</h2>
+                            </div>
+                            <form action="#" class="field-login-form">
+                                <div>
+                                    <label for="Phone-numb">Номер телефону</label>
+                                    <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="000-000-0000"
+                                        required>
+                                </div>
+                                <div>
+                                    <label for="email">E-mail</label>
+                                    <input type="email" pattern="^\S+@\S+\.\S+$" size="30" placeholder="" required>
+                                </div>
+                                <div>
+                                    <label for="pass">Пароль</label>
+                                    <input type="password" minlength="8" required>
+                                </div>
+                                <div>
+                                    <label for="url">Посилання на SNS</label>
+                                    <input type="url" pattern="https://.*" size="30" required>
+                                </div>
+                                <div>
+                                    <label for="brth">Дата народження</label>
+                                    <input type="date" min="1900-01-01" max="2025-01-01">
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="main-button form-button">Відправити</button>
+                                </div>
+                            </form>
+                        </div>
+                </div>
+            </div>
         </div>
-    </span>
+        <header class="container">
+            <div class="top">Найвигідніші пропозиції шукайте на сторінці акцій!</div>
+            <div>
+                <span><a href="Home.html"><img src="logo.png" class="logo"></a>
+                    <div class="middle">
+                        <ul>
+                            <li>
+                                <form><input type="search" class="h-search" placeholder="Пошук"><button type="submit"
+                                        class="img-loop"><img src="icons/loop.svg"></button></form>
+                            </li>
+                            <li class="main-button"><a href="#"><img src="icons/heart.svg" class="icon"></a></li>
+                            <li class="main-button"><a href="#"><img src="icons/cart.svg"></a></li>
+                            <li class="main-button" style="padding-top: 15px;">
+                                <label for="show-popup" class="profile-btn">Профіль</label>
+                            </li>
+                        </ul>
+                    </div>
+                </span>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li style="width:285px;">
+                        <div class="menu-button"><a href="Home.html"><img src="icons/sandwich.svg">Каталог</a></div>
+                        <div class="whole-catalog">
+                            <ul>
+                                <li class="active">
+                                    <div class="catalog-title"><a href="#">Собакам</a></div>
+                                    <div class="catalog">
+                                        <ul>
+                                            <li class="catalog-title-block"><a href="#"><span>Корм для собак</span></a>
+                                            </li>
+                                            <li><a href="#">Сухий корм для собак</a></li>
+                                            <li><a href="#">Ласощі для собак</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li class="catalog-title-block"><a href="#"><span>Аксесуари</span></a></li>
+                                            <li><a href="#">Іграшки для собак</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li class="catalog-title-block"><a href="#"><span>Догляд</span></a></li>
+                                            <li><a href="#">Шампуні для собак</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="catalog-title"><a href="#">Котам</a></div>
+                                    <div class="catalog">
+                                        <ul>
+                                            <li class="catalog-title-block"><a href="#"><span>Корм для кішок</span></a>
+                                            </li>
+                                            <li><a href="#">Сухий корм для котів</a></li>
+                                            <li><a href="#">Ласощі для котів</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li class="catalog-title-block"><a href="#"><span>Аксесуари</span></a></li>
+                                            <li><a href="#">Дряпки для котів</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li class="catalog-title-block"><a href="#"><span>Догляд</span></a></li>
+                                            <li><a href="#">Шампуні для котів</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="catalog-title"><a href="#">Птахам</a></div>
+                                    <div class="catalog">
+                                        <ul>
+                                            <li class="catalog-title-block"><a href="#"><span>Годування
+                                                        птахів</span></a></li>
+                                            <li><a href="#">Корм для птахів</a></li>
+                                            <li><a href="#">Ласощі</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li class="catalog-title-block"><a href="#"><span>Аксесуари</span></a></li>
+                                            <li><a href="#">Клітки для птахів</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li class="catalog-title-block"><a href="#"><span>Догляд</span></a></li>
+                                            <li><a href="#">Купалки для птахів</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu-button"><a href="Promotion.html">Акції</a></li>
+                    <li class="menu-button"><a href="Post.html">Доставка</a></li>
+                    <li class="menu-button"><a href="Blog.html">Блог</a></li>
+                    <li class="menu-button"><a href="Recall.html">Контакти</a></li>
+                    <li class="menu-button" style="width:283px;"><a href="#">Зворотній зв'язок</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="whole-body-block-cart">
+                <div class="cart-img-block">
+                    <img src="img/125634_01.jpg" class="main-cart-image">
+                    <span class="sub-cart-image-block">
+                        <ul>
+                            <li><img src="img/125634_02.jpg" class="sub-cart-image"></li>
+                            <li><img src="img/125634_03.jpg" class="sub-cart-image"></li>
+                            <li><img src="img/125634_04.jpg" class="sub-cart-image"></li>
+                        </ul>
+                    </span>
+                </div>
+                <div class="right-cart-text-block">
+                    <p class="cart-title">Royal Canin Indoor - Сухий корм з птицею для домашніх котів</p>
+                    <span>
+                        <div class="under-cart-title">
+                            <img src="img/royal-canin-1-logo.png" class="cart-logo">
+                            <div id="price">
+                                <div class="cart-in-out">
+                                    <p>В наявності</p>
+                                    <img src="icons/heart-cart-prw.svg">
+                                </div>
+                                <p class="cart-price">196 грн</p>
+                            </div>
+                            <div>
+                                <p>Код товару: 125634</p>
+                                <button class="cart-button">Купити<a href=""></a></button>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="cart-lines-botton-block">
+                        <button class="cart-lines-botton">2 кг</button>
+                        <button class="cart-lines-botton">10 кг</button>
+                        <button class="cart-lines-botton">400 г</button>
+                    </span>
+                    <div class="cart-dicr-country">
+                        <p>Виробник: Франція</p>
+                    </div>
+                    <div class="cart-deliver-city">
+                        <p>Доставка: </p>
+                        <select id="post-city">
+                            <option value="1" id="is1">Київ</option>
+                            <option value="2" id="is2">Харків</option>
+                            <option value="3" id="is3">Дніпро</option>
+                        </select>
+                    </div>
+                    <div class="cart-post-block">
+                        <div>
+                            <p class="cart-post-block-title">Кур’єр:</p>
+                            <ul>
+                                <li>Безкоштовно від 799 грн.</li>
+                                <li>Доставимо завтра.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="cart-post-block-title">Кур’єр Нової Пошти:</p>
+                            <ul>
+                                <li>Безкоштовно від 899 грн.</li>
+                                <li>Відправимо завтра.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="cart-post-block-title">Поштомат / Відділення:</p>
+                            <ul>
+                                <li>Безкоштовно від 499 грн.</li>
+                                <li>Відправимо завтра.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-describe-block">
+                    <table class="cart-option-table">
+                        <caption>Характеристики</caption>
+                        <tr>
+                            <td id="left">Для кого?</td>
+                            <td id="right">Для кішок</td>
+                        </tr>
+                        <tr>
+                            <td id="left">Клас</td>
+                            <td id="right">Супер преміум</td>
+                        </tr>
+                        <tr>
+                            <td id="left">Форма випуску</td>
+                            <td id="right">Сухий</td>
+                        </tr>
+                        <tr>
+                            <td id="left">Вік</td>
+                            <td id="right">Доросла кішка</td>
+                        </tr>
+                        <tr>
+                            <td id="left">Основне джерело протеїнів</td>
+                            <td id="right">Курка</td>
+                        </tr>
+                        <tr>
+                            <td id="left">Особливі потреби у харчуванні</td>
+                            <td id="right">Надлишкова вага, підтримка здоров’я</td>
+                        </tr>
+                    </table>
+                    <h1>Опис</h1>
+                    <div>
+                        <p>Повнораціонний корм для кішок і котів (з 1 до 7 років), які живуть і весь свій час проводять
+                            в будинку.
+                            Сухий корм має помірну калорійність і внаслідок додавання "L- карнітину" зменшує жирові
+                            скупчення у тварини.</p>
+                        Також корм сприяє зменшенню і виведенню через стравохід волосяних кульок, завдяки
+                        неферментованій особливій клітковині.
+                        Зменшення запаху випорожнень тварини відбувається за допомогою "L.I.P." - білків, які прекрасно
+                        засвоюються організмом Вашого вихованця.</p>
+                        <p>Помірна калорійність. Помірний рівень вмісту жирів в раціоні відповідає низькому рівню
+                            активності котів, які мешкають в приміщенні.
+                            Виведення волосяних комків. Сприяє виведенню з травної системи ковтнув вовни природним
+                            шляхом завдяки вмісту клітковини особливого типу, в тому числі з насіння подорожника.
+                            Здоров'я сечовивідної системи. Формула раціону сприяє підтримці здоров'я сечовивідної
+                            системи дорослих кішок</p>
+                    </div>
+                    <h1>Склад</h1>
+                    <div>
+                        <p>Дегідратовані протеїни м’яса птиці, рис, пшениця, кукурудза, ізолят рослинних протеїнів*,
+                            тваринні жири, гідролізат білків тваринного походження, пшеничне борошно, рослинна
+                            клітковина, буряковий жом, дріжджі та їх частки, соєва олія, мінеральні речовини,
+                            фруктоолiгосахариди, риб’ячий жир, оболонка та насіння подорожника (0,5%).
+                            Добавки (на 1 кг): харчові добавки: вітамін A - 13 500 MO; вітамін D3 - 700 MO; E1 (залізо)
+                            - 42 мг; E2 (йод) - 4,2 мг; E4 (мідь) - 13 мг; E5 (марганець) - 55 мг; E6 (цинк) - 164 мг;
+                            E8 (селен) - 0,09 мг; технологічні добавки: клиноптилоліт осадового походження - 10 г.
+                            Консерванти. Антиоксиданти.
+                            Аналітичні компоненти: сирий протеїн - 27%; сирий жир - 13%; сира зола - 7,3%; сира
+                            клітковина - 4%.
+                            * L.I.P. - білки, відібрані за принципом оптимальної засвоюваності.</p>
+                    </div>
+                <div id="frame">
+                    <iframe width="600" height="400" src="https://www.youtube.com/embed/cy9N0pp-5d8" title="Третий тизер" frameborder="1" allowfullscreen=""></iframe>
+                </div>
+                </div>
+                <div class="cart-comment-block">
+                    <h1>Відгуки</h1>
+                    <form method="post">
+                        <input type="text" placeholder="Ім’я" id="name">
+                        <textarea placeholder="Напишіть відгук" id="text-comment"></textarea>
+                        <div id="btn-com">
+                            <button class="main-button" type="submit" id="btn-comment">Залишити відгук</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="toUp" title="Back to top">Наверх</div>
+            </div>
     </div>
-    <nav class="menu">
-        <ul>
-            <li class="menu-button" style="width:285px;"><a href="#"><img src="icons/sandwich.svg">Каталог</a></li>
-            <li class="menu-button"><a href="#">Акції</a></li>
-            <li class="menu-button"><a href="#">Доставка</a></li>
-            <li class="menu-button"><a href="#">Блог</a></li>
-            <li class="menu-button"><a href="#">Контакти</a></li>
-            <li class="menu-button" style="width:283px;"><a href="#">Зворотній зв'язок</a></li>
-        </ul>
-    </nav>
-</header>
+    <div class="sub-block">
+        <div>
+            <span class="sub-title">Підписатися на розсилку</span>
+            <form>
+                <input type="email" placeholder="E-mail" class="sub-mail">
+                <button type="submit" class="main-button">Відправити</button>
+            </form>
+        </div>
+    </div>
+    </main>
+    </div>
+    <footer>
+        <div class="footer-container-blocks">
+            <div>
+                <p class="ft-blocks-title">Каталог товарів</p>
+                <ul>
+                    <li>Товари для собак</li>
+                    <li>Товари для кішок</li>
+                    <li>Товари для птахів</li>
+                </ul>
+            </div>
+            <div>
+                <p class="ft-blocks-title">Клієнтам</p>
+                <ul>
+                    <li><a href="Post.html">Доставка</a></li>
+                    <li><a href="Blog.html">Блог</a></li>
+                    <li><a href="Recall.html">Контакти</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="ft-blocks-title">Корисне</p>
+                <ul>
+                    <li><a href="Politic.html">Політика конфіденційності</a></li>
+                </ul>
+            </div>
 
-</div>
+            <span>
+                <div>
+                    <p class="ft-blocks-title">Клієнтам</p>
+                    <ul>
+                        <li>+380 000 00 00</li>
+                        <li>+380 000 00 00</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="ft-blocks-title">Графік роботи</p>
+                    <ul>
+                        <li>ПН - ПТ: 09:00 - 18:00</li>
+                        <li>СБ - ВС: Вихідний</li>
+                    </ul>
+                    <ul id="SNN">
+                        <li><a href="#"><img src="icons/facebook.svg" alt="facebook"></a></li>
+                        <li><a href="#"><img src="icons/telegram.svg" alt="telegram"></a></li>
+                        <li><a href="#"><img src="icons/viber.svg" alt="viber"></a></li>
+                        <li><img src="icons/mastercard.svg" alt="mastercart"></li>
+                    </ul>
+                </div>
+            </span>
 
-    
+        </div>
 </body>
+
 </html>
