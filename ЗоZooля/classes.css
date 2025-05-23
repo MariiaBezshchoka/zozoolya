@@ -285,6 +285,33 @@ header nav ul li ul li div ul li:hover {
     outline-style: solid;
 }
 
+.feedback-container {
+    position: relative;
+    display: inline-block;
+}
+
+.feedback-button {
+    border: none;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    width: 250px;
+    z-index: 10;
+}
+
+.feedback-container:hover .tooltip {
+    display: block;
+}
 
 .main-button {
     background-color:#ffff;
@@ -351,6 +378,11 @@ header nav ul li ul li div ul li:hover {
     margin: 0px 40px;
 }
 
+.post img {
+    width: 100px;
+    height: 100px;
+}
+
 .cart-block a:not(button a):hover {
     text-decoration: underline;
     color: #023B45;
@@ -362,8 +394,32 @@ header nav ul li ul li div ul li:hover {
 .cart-block div {
     display: flex;
     justify-content: space-between;
-    padding: 5px 10px;
-    align-items: center;
+    align-content: space-around;
+    margin: 0 10px;
+}
+
+.post {
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: center;
+
+}
+
+#_strust {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.struct {
+    height: auto;
+    width: 250px;
+    padding: 0 50px;
+}
+
+#whole-blog {
+    padding: 50px;
+    border-left: #023B45 1px solid;
 }
 
 .whole-body-block {
